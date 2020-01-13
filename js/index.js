@@ -49,6 +49,22 @@ document.querySelector("nav").children[3].innerText = siteContent["nav"]["nav-it
 document.querySelector("nav").children[4].innerText = siteContent["nav"]["nav-item-5"];
 document.querySelector("nav").children[5].innerText = siteContent["nav"]["nav-item-6"];
 
+const newCrap = document.createElement("a");
+newCrap.textContent = "Feedback";
+newCrap.setAttribute('href', '#');
+document.querySelector('nav').appendChild(newCrap)
+
+const newNav = document.createElement("a");
+newNav.textContent = "What";
+newNav.setAttribute('href', '#');
+document.querySelector('nav').prepend(newNav)
+
+const navGreen = document.querySelectorAll('nav a')
+navGreen.forEach( element => {
+  element.style.color = "green"
+})
+
+
 //CTA
 document.getElementsByClassName("cta-text")[0].children[0].innerText = siteContent["cta"]["h1"];
 document.getElementsByClassName("cta-text")[0].children[1].innerText = siteContent["cta"]["button"];
